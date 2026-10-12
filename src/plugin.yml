@@ -1,0 +1,7 @@
+name: ResPortalItem
+version: 1.0.0
+main: com.resportalitem.ResPortalItem
+api-version: '1.21'
+depend: [Residence]
+author: Nowhere
+description: Allows non-player entities (items) to create nether portals inside residences, independent of the build flag.

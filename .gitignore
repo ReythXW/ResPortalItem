@@ -1,0 +1,2 @@
+# javac 编译输出（可重新编译，见 README「从源码构建」）
+build/

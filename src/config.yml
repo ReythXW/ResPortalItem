@@ -1,0 +1,26 @@
+# ResPortalItem
+#
+# 作用：让"非玩家实体"（掉落物等）穿过地狱门时，能在领地内创建对面的门，
+#       而不需要把领地的 build 权限放开。
+#
+# 玩家本人穿过门的行为完全不受本插件影响，仍然由 Residence 按 build 判定。
+#
+# 每个领地用自定义 flag 单独控制：
+#   /res set <领地> portalitem true     -> 允许物品在该领地建门
+#   /res set <领地> portalitem false    -> 禁止（即使 build 是 true）
+#   /res set <领地> portalitem remove   -> 取消设置，回到默认（禁止）
+#
+# tab 补全里还有一个中文别名 Portalitem-创建地狱门，它注册成"只含 portalitem 的 flag 组"，
+# 写进领地的仍然是 portalitem，两个名字是同一个值。
+#
+# 默认值就是 false：新建领地、以及所有没显式设过 portalitem 的旧领地，
+# 一律禁止物品建门。想放行必须显式 true。
+
+# 只放行掉落物（Item 实体）。
+# true  = 只有掉落物能触发（推荐）
+# false = 所有非玩家实体都能触发，包括僵尸猪灵之类的怪物
+only-items: true
+
+# 危险开关：true 时任何非玩家实体都能在"任意领地"建门，
+# 完全忽略 portalitem flag 和 build flag。正常情况保持 false。
+global-allow: false
