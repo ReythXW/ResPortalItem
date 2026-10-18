@@ -1,7 +1,7 @@
-name: ResPortalItem
-version: 1.0.0
-main: com.resportalitem.ResPortalItem
+name: ResExtraFlags
+version: 1.3.0
+main: com.resextraflags.ResExtraFlags
 api-version: '1.21'
 depend: [Residence]
 author: Nowhere
-description: Allows non-player entities (items) to create nether portals inside residences, independent of the build flag.
+description: Extra residence flags - portal item creation and rewritten friendly mob spawn permissions.
